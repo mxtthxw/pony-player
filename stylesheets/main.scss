@@ -1,0 +1,62 @@
+$font1: 'Pacifico', cursive;
+$font2: 'Quicksand', sans-serif;
+$fontsize: 40px;
+$unit: 20px;
+$color1: #D0A1E1;
+// wisteria (light purple)
+$color2: #653188;
+// eminence (deep purple)
+$color3: #EE4D90;
+// french rose (bright pink)
+$color4: #ffffff;
+
+.headline {
+	font-size: 3 * $fontsize;
+	font-family: $font1;
+	text-align: center;
+	text-shadow: 2px 2px 4px #000;
+	margin-top: $unit * 2;
+	margin-bottom: $unit * 2;
+	color: $color2;
+}
+
+.now-playing {
+	font-size: $fontsize;
+	font-family: $font2;
+}
+
+body {
+	background: $color1;
+}
+
+.artist-image {
+	margin-top: 100px;
+}
+
+#twilight {
+	width: 350px;
+	margin-top: 30px;
+	margin-left: -80px;
+}
+
+.player {
+	border: $unit * 0.5 solid $color2;
+	border-radius: $unit;
+	// padding-top: $unit;
+	padding-bottom: $unit;
+}
+
+#artist, #title, #year, #genre, #track-length, #play-count {
+	font-size: 0.75 * $fontsize;
+	font-family: $font2;
+}
+
+.info {
+	color: $color3;
+	font-family: $font1;
+	margin-top: -5px;
+}
+
+.buttons {
+	margin-top: 30px;
+}

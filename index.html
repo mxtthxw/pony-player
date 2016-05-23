@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pony Player</title>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico|Quicksand' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"></link>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css.map"></link>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css.map"></link>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/scripts.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h1 class="headline">Pony Player</h1>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+
+	<div class="container player">
+		<div class="col-md-3 artist-image">
+			<span id="image"></span>
+		</div>
+		<div class="col-md-6">
+			<h2 class="now-playing">Now Playing</h2>
+			<h3 class="info">Artist: <span id="artist"></span></h3>
+			<h3 class="info">Title: <span id="title"></span></h3>
+			<h3 class="info">Year: <span id="year"></span></h3>
+			<h3 class="info">Genre: <span id="genre"></span></h3>
+			<h3 class="info">Duration: <span id="track-length"></span></h3>
+			<h3 class="info">Play Count: <span id="play-count"></span></h3>
+
+			<audio id="audio-source">
+			  <source type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+
+			<div class="buttons">
+				<button type="button" name="play" class="play">Play</button>
+				<button type="button" name="pause" class="pause" id="pause">Pause</button>
+				<button type="button" name="stop" class="stop">Stop</button>
+				<button type="button" name="previous" class="previous">Previous Track</button>
+				<button type="button" name="next" class="next">Next Track</button>
+				<button type="button" name="random" class="random">Random</button>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<img src="images/twilight_sparkle2.png" id="twilight">
+		</div>
+
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h2 class="now-playing">Add A Song:</h2>
+				<form class="new-form">
+					<h3 class="info">Artist: <input type="text" name="addartist"></h3>
+					<h3 class="info">Title: <input type="text" name="addtitle"></h3>
+					<h3 class="info">Year: <input type="text" name="addyear"></h3>
+					<h3 class="info">Genre: <input type="text" name="addgenre"></h3>
+					<h3 class="info">MP3 URL: <input type="text" name="addlink"></h3>
+					<h3 class="info">Image URL: <input type="text" name="addimage"></h3>
+					<input type="submit" class="submit" action="submit">
+				</form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+
+</body>
+</html>

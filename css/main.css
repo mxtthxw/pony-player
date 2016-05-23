@@ -1,0 +1,42 @@
+.headline {
+  font-size: 120px;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #653188; }
+
+.now-playing {
+  font-size: 40px;
+  font-family: "Quicksand", sans-serif; }
+
+body {
+  background: #D0A1E1; }
+
+.artist-image {
+  margin-top: 100px; }
+
+#twilight {
+  width: 350px;
+  margin-top: 30px;
+  margin-left: -80px; }
+
+.player {
+  border: 10px solid #653188;
+  border-radius: 20px;
+  padding-bottom: 20px; }
+
+#artist, #title, #year, #genre, #track-length, #play-count {
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif; }
+
+.info {
+  color: #EE4D90;
+  font-family: "Pacifico", cursive;
+  margin-top: -5px; }
+
+.buttons {
+  margin-top: 30px; }
+
+/*# sourceMappingURL=main.css.map */
