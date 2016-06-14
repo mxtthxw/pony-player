@@ -1,3 +1,6 @@
+<!-- TO DO -->
+<!-- fix pony buttons so twilight is highlighted on page load, but un-highlights when another pony is clicked.  also: styling? -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,9 +22,38 @@
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
-				<h1 class="headline">Pony Player</h1>
+				<h1 class="headline"><span class="t1">P</span><span class="t2">o</span><span class="t3">n</span><span class="t4">y</span><span class="t5"> P</span><span class="t6">l</span><span class="t1">a</span><span class="t2">y</span><span class="t3">e</span><span class="t4">r</span></h1>
 			</div>
 			<div class="col-md-2"></div>
+		</div>
+	</div>
+
+	<div class="pony-picker row">
+		<div class="col-md-2">
+		</div>
+			<div class="col-md-8">
+				<div class="btn-group btn-group-justified pony-buttons" role="group" aria-label="...">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default twilight-sparkle active" aria-pressed="true">Twilight Sparkle</button>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default applejack">Applejack</button>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default rainbow-dash">Rainbow Dash</button>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default rarity">Rarity</button>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default fluttershy">Fluttershy</button>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default pinkie-pie">Pinkie Pie</button>
+					</div>
+				</div>
+			</div>
+		<div class="col-md-2">
 		</div>
 	</div>
 
@@ -31,18 +63,19 @@
 		</div>
 		<div class="col-md-6">
 			<h2 class="now-playing">Now Playing</h2>
-			<h3 class="info">Artist: <span id="artist"></span></h3>
-			<h3 class="info">Title: <span id="title"></span></h3>
-			<h3 class="info">Year: <span id="year"></span></h3>
-			<h3 class="info">Genre: <span id="genre"></span></h3>
-			<h3 class="info">Duration: <span id="track-length"></span></h3>
-			<h3 class="info">Play Count: <span id="play-count"></span></h3>
+			<h3 class="info t1">Artist: <span id="artist"></span></h3>
+			<h3 class="info t2">Title: <span id="title"></span></h3>
+			<h3 class="info t3">Year: <span id="year"></span></h3>
+			<h3 class="info t4">Genre: <span id="genre"></span></h3>
+			<h3 class="info t5">Duration: <span id="track-length"></span></h3>
+			<h3 class="info t6">Play Count: <span id="play-count"></span></h3>
 
 			<audio id="audio-source">
 			  <source type="audio/mpeg">
 				Your browser does not support the audio element.
 			</audio>
 
+<!-- temporary audio with controls to test duration property -->
 			<audio id="audio-source2" controls>
 			  <source type="audio/mpeg" src="media/champanes-daysaway.mp3">
 				Your browser does not support the audio element.
@@ -58,7 +91,8 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			<img src="images/twilight_sparkle2.png" id="twilight">
+			<img src="images/twilight_sparkle2.png" id="pony-image">
+			<!-- <img src="images/applejack2.png" id="pony-image"> -->
 		</div>
 
 		<div class="row">
@@ -66,12 +100,12 @@
 			<div class="col-md-6">
 				<h2 class="now-playing">Add A Song:</h2>
 				<form class="new-form">
-					<h3 class="info">Artist: <input type="text" name="addartist" class="addsong addartist"></h3>
-					<h3 class="info">Title: <input type="text" name="addtitle" class="addsong addtitle"></h3>
-					<h3 class="info">Year: <input type="text" name="addyear" class="addsong addyear"></h3>
-					<h3 class="info">Genre: <input type="text" name="addgenre" class="addsong addgenre"></h3>
-					<h3 class="info">MP3 URL: <input type="text" name="addlink" class="addsong addlink"></h3>
-					<h3 class="info">Image URL: <input type="text" name="addimage" class="addsong addimage"></h3>
+					<h3 class="info t1">Artist: <input type="text" name="addartist" class="addsong addartist"></h3>
+					<h3 class="info t2">Title: <input type="text" name="addtitle" class="addsong addtitle"></h3>
+					<h3 class="info t3">Year: <input type="text" name="addyear" class="addsong addyear"></h3>
+					<h3 class="info t4">Genre: <input type="text" name="addgenre" class="addsong addgenre"></h3>
+					<h3 class="info t5">MP3 URL: <input type="text" name="addlink" class="addsong addlink"></h3>
+					<h3 class="info t6">Image URL: <input type="text" name="addimage" class="addsong addimage"></h3>
 					<input type="submit" class="submit" action="submit"><h3 class="info addmessage"></h3>
 				</form>
 			</div>

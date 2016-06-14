@@ -5,7 +5,14 @@
   text-shadow: 2px 2px 4px #000;
   margin-top: 40px;
   margin-bottom: 40px;
-  color: #653188; 
+  color: #653188;
+  /*color: #F5EFB3;*/
+}
+
+.pony-buttons {
+  font-family: "Quicksand", sans-serif;
+  color: #EE4D90;
+  /*color: #EA403F;*/
 }
 
 .now-playing {
@@ -14,14 +21,16 @@
 }
 
 body {
-  background: #D0A1E1; 
+  background: #D0A1E1;
+  /*background: #F8B968;*/
+
 }
 
 .artist-image {
   margin-top: 100px; 
 }
 
-#twilight {
+#pony-image {
   width: 350px;
   margin-top: 30px;
   margin-left: -80px; 
@@ -29,6 +38,7 @@ body {
 
 .player {
   border: 10px solid #653188;
+  /*border: 10px solid #F5EFB3;*/
   border-radius: 20px;
   padding-bottom: 20px; 
 }
@@ -45,8 +55,33 @@ body {
 
 .info {
   color: #EE4D90;
+  /*color: #EA403F;*/
   font-family: "Pacifico", cursive;
   margin-top: -5px; 
+}
+
+.t1 {
+  
+}
+
+.t2 {
+  
+}
+
+.t3 {
+  
+}
+
+.t4 {
+  
+}
+
+.t5 {
+  
+}
+
+.t6 {
+  
 }
 
 .addmessage {
