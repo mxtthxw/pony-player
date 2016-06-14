@@ -43,6 +43,11 @@
 				Your browser does not support the audio element.
 			</audio>
 
+			<audio id="audio-source2" controls>
+			  <source type="audio/mpeg" src="media/champanes-daysaway.mp3">
+				Your browser does not support the audio element.
+			</audio>
+
 			<div class="buttons">
 				<button type="button" name="play" class="play">Play</button>
 				<button type="button" name="pause" class="pause" id="pause">Pause</button>
@@ -61,13 +66,13 @@
 			<div class="col-md-6">
 				<h2 class="now-playing">Add A Song:</h2>
 				<form class="new-form">
-					<h3 class="info">Artist: <input type="text" name="addartist"></h3>
-					<h3 class="info">Title: <input type="text" name="addtitle"></h3>
-					<h3 class="info">Year: <input type="text" name="addyear"></h3>
-					<h3 class="info">Genre: <input type="text" name="addgenre"></h3>
-					<h3 class="info">MP3 URL: <input type="text" name="addlink"></h3>
-					<h3 class="info">Image URL: <input type="text" name="addimage"></h3>
-					<input type="submit" class="submit" action="submit">
+					<h3 class="info">Artist: <input type="text" name="addartist" class="addsong addartist"></h3>
+					<h3 class="info">Title: <input type="text" name="addtitle" class="addsong addtitle"></h3>
+					<h3 class="info">Year: <input type="text" name="addyear" class="addsong addyear"></h3>
+					<h3 class="info">Genre: <input type="text" name="addgenre" class="addsong addgenre"></h3>
+					<h3 class="info">MP3 URL: <input type="text" name="addlink" class="addsong addlink"></h3>
+					<h3 class="info">Image URL: <input type="text" name="addimage" class="addsong addimage"></h3>
+					<input type="submit" class="submit" action="submit"><h3 class="info addmessage"></h3>
 				</form>
 			</div>
 			<div class="col-md-3"></div>

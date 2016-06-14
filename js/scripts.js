@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+checkContainer();
+
+function checkContainer() {
+  if($('#audio-source2').is(':visible')){
+    console.log($("#audio-source2")[0].duration);
+  } else {
+    setTimeout(checkContainer, 50);
+  }
+}
+
 // sample play function (for testing)
 // $(".play").on("click", function(){
 // 	$("#audio-source")[0].play();
@@ -38,7 +48,7 @@ var song07 = new Song("Dua Lipa", "Hotter Than Hell", "2016", "pop", "media/dua_
 
 var song08 = new Song("Yumi Zouma", "Keep It Close To Me", "2016", "dream pop", "media/yumi_zouma-keep_it_close_to_me.mp3", "images/yumi_zouma.jpg");
 
-// var song09 = new Song("Champanes", "Days Away", "2016", "dream pop", "media/champanes-daysaway.mp3", "images/champanes.jpg");
+// var song09 = new Song("Champanes", "Daysaway", "2016", "dream pop", "media/champanes-daysaway.mp3", "images/champanes.jpg");
 
 // var song10 = new Song("Maria Usbeck", "Moai Y Yo", "2016", "dream pop", "media/maria_usbeck-moai_y_yo.mp3", "images/maria_usbeck.jpg");
 
@@ -63,9 +73,15 @@ function Jukebox(songs) {
 	this.counter = 0;
 	this.currentSong = this.songs[0];
 
+	this.addDuration = function(){
+		console.log($("#audio-source")[0].duration);
+	}
+
 	this.play = function(){
 		$("#audio-source").attr("src", this.currentSong.link);
+		console.log($("#audio-source")[0].duration);
 		$("#audio-source")[0].play();
+		console.log($("#audio-source")[0].duration);
 		$("#audio-source")[0].duration = length;
 		var minutes = Math.floor(length/60);
 		var seconds = length - minutes * 60;
@@ -80,6 +96,7 @@ function Jukebox(songs) {
 		$("#play-count").text(this.currentSong.playCount);
 		$("#image").html("<img src='" + this.currentSong.image + "'>")
 		this.currentSong.playCount += 1;
+		this.addDuration();
 		// this.counter += 1;
 	}
 
@@ -96,6 +113,13 @@ function Jukebox(songs) {
 		$("#audio-source")[0].pause();
 		this.counter = 0;
 		this.currentSong = this.songs[this.counter];
+		$("#artist").text("");
+		$("#title").text("");
+		$("#year").text("");
+		$("#genre").text("");
+		$("#track-length").text("");
+		$("#play-count").text("");
+		$("#image").html("");
 	}
 
 	this.next = function(){
@@ -171,8 +195,20 @@ $(".random").on("click", function(){
 })
 
 $(".submit").on("click", function(){
-	console.log(addartist);
-	var newSong = new Song(addartist, addtitle, addyear, addgenre, addlink, addimage);
+	console.log(juke.songs);
+	var newSong = new Song($(".addartist").val(), $(".addtitle").val(), $(".addyear").val(), $(".addgenre").val(), $(".addlink").val(), $(".addimage").val());
+	console.log(juke.songs);
+	// juke.load(newSong);
+	console.log("test");
+	// $(".new-form").reset;
+	$(".addmessage").html($(".addartist").val() + ' - "' + $(".addtitle").val() + '" has been added to Pony Player!');
+	$(".addartist").val("");
+	$(".addtitle").val("");
+	$(".addyear").val("");
+	$(".addgenre").val("");
+	$(".addlink").val("");
+	$(".addimage").val("");
+	return false;
 })
 
 });
