@@ -7,6 +7,8 @@
   margin-bottom: 40px;
   color: #653188;
   /*color: #F5EFB3;*/
+  position: relative;
+  z-index: 10;
 }
 
 .pony-buttons {
@@ -27,13 +29,22 @@ body {
 }
 
 .artist-image {
-  margin-top: 100px; 
+  /*margin-top: 100px;*/
+  /*height: 477px;*/
+  width: 170px;
+  border: 5px solid #653188;
+  border-radius: 100%;
+  margin-top: 140px;
+  margin-left: 40px;
+  /*position: absolute;*/
 }
 
 #pony-image {
-  width: 350px;
+  width: 400px;
   margin-top: 30px;
-  margin-left: -80px; 
+  margin-left: -80px;
+  position: absolute;
+  z-index: 5;
 }
 
 .player {
@@ -51,13 +62,19 @@ body {
 .addsong {
   font-family: "Quicksand", sans-serif;
   color: #000;
+  float: right;
+  margin-bottom: 10px;
 }
 
 .info {
   color: #EE4D90;
   /*color: #EA403F;*/
   font-family: "Pacifico", cursive;
-  margin-top: -5px; 
+  /*margin-top: -5px; */
+}
+
+.new-form {
+  margin-bottom: 20px;
 }
 
 .t1 {
@@ -93,7 +110,8 @@ body {
 }
 
 .buttons {
-  margin-top: 30px; 
+  margin-top: 30px;
+  font-family: "Quicksand", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

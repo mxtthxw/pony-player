@@ -1,5 +1,10 @@
 <!-- TO DO -->
-<!-- fix pony buttons so twilight is highlighted on page load, but un-highlights when another pony is clicked.  also: styling? -->
+<!-- 
+1. fix pony buttons so twilight is highlighted on page load, but un-highlights when another pony is clicked.  adding class "active" doesn't quite do the trick.
+2. fix responsiveness
+3. add progress bar and/or time counter?
+4. add playlist of all tracks? 
+-->
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +39,7 @@
 			<div class="col-md-8">
 				<div class="btn-group btn-group-justified pony-buttons" role="group" aria-label="...">
 					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default twilight-sparkle active" aria-pressed="true">Twilight Sparkle</button>
+						<button type="button" class="btn btn-default twilight-sparkle">Twilight Sparkle</button>
 					</div>
 					<div class="btn-group" role="group">
 						<button type="button" class="btn btn-default applejack">Applejack</button>
@@ -58,17 +63,17 @@
 	</div>
 
 	<div class="container player">
-		<div class="col-md-3 artist-image">
-			<span id="image"></span>
+		<div class="col-md-3">
+			<span id="image"><img class="artist-image" src="images/chromatics.jpg"></span>
 		</div>
 		<div class="col-md-6">
 			<h2 class="now-playing">Now Playing</h2>
-			<h3 class="info t1">Artist: <span id="artist"></span></h3>
-			<h3 class="info t2">Title: <span id="title"></span></h3>
-			<h3 class="info t3">Year: <span id="year"></span></h3>
-			<h3 class="info t4">Genre: <span id="genre"></span></h3>
+			<h3 class="info t1">Artist: <span id="artist">Chromatics</span></h3>
+			<h3 class="info t2">Title: <span id="title">Cherry</span></h3>
+			<h3 class="info t3">Year: <span id="year">2012</span></h3>
+			<h3 class="info t4">Genre: <span id="genre">electro-pop</span></h3>
 			<h3 class="info t5">Duration: <span id="track-length"></span></h3>
-			<h3 class="info t6">Play Count: <span id="play-count"></span></h3>
+			<h3 class="info t6">Play Count: <span id="play-count">0</span></h3>
 
 			<audio id="audio-source">
 			  <source type="audio/mpeg">
@@ -76,18 +81,18 @@
 			</audio>
 
 <!-- temporary audio with controls to test duration property -->
-			<audio id="audio-source2" controls>
+<!-- 			<audio id="audio-source2" controls>
 			  <source type="audio/mpeg" src="media/champanes-daysaway.mp3">
 				Your browser does not support the audio element.
-			</audio>
+			</audio> -->
 
 			<div class="buttons">
-				<button type="button" name="play" class="play">Play</button>
-				<button type="button" name="pause" class="pause" id="pause">Pause</button>
-				<button type="button" name="stop" class="stop">Stop</button>
-				<button type="button" name="previous" class="previous">Previous Track</button>
-				<button type="button" name="next" class="next">Next Track</button>
-				<button type="button" name="random" class="random">Random</button>
+				<button type="button" name="play" class="btn btn-default play">Play</button>
+				<button type="button" name="pause" class="btn btn-default pause" id="pause">Pause</button>
+				<button type="button" name="stop" class="btn btn-default stop">Stop</button>
+				<button type="button" name="previous" class="btn btn-default previous">Previous</button>
+				<button type="button" name="next" class="btn btn-default next">Next</button>
+				<button type="button" name="random" class="btn btn-default random">Random</button>
 			</div>
 		</div>
 		<div class="col-md-3">
@@ -95,9 +100,11 @@
 			<!-- <img src="images/applejack2.png" id="pony-image"> -->
 		</div>
 
-		<div class="row">
-			<div class="col-md-3"></div>
-			<div class="col-md-6">
+	</div>
+
+	<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
 				<h2 class="now-playing">Add A Song:</h2>
 				<form class="new-form">
 					<h3 class="info t1">Artist: <input type="text" name="addartist" class="addsong addartist"></h3>
@@ -109,9 +116,8 @@
 					<input type="submit" class="submit" action="submit"><h3 class="info addmessage"></h3>
 				</form>
 			</div>
-			<div class="col-md-3"></div>
+			<div class="col-md-4"></div>
 		</div>
-	</div>
 
 </body>
 </html>
