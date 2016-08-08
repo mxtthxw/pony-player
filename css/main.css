@@ -90,4 +90,42 @@ input {
 .buttons-container > button {
   box-shadow: 2px 2px 4px #000; }
 
+@media all and (max-width: 991px) {
+  .btn-add-song {
+    margin-top: 0px; } }
+@media all and (max-width: 767px) {
+  .pony-buttons > * button {
+    font-size: 12px; }
+
+  #pony-image {
+    width: 200px;
+    position: static;
+    display: block;
+    margin: 0 auto; }
+
+  .artist-image {
+    margin-top: 0px;
+    display: block;
+    margin: 0 auto; }
+
+  .half-size {
+    width: 45%;
+    margin-right: 0px; }
+
+  .buttons-container {
+    width: 435px;
+    display: block;
+    margin: 0 auto; }
+
+  .name-drop {
+    display: none; } }
+@media all and (max-width: 494px) {
+  .buttons-container {
+    width: 375px;
+    display: block;
+    margin: 0 auto; }
+
+  .pony-buttons > * button {
+    font-size: 9px; } }
+
 /*# sourceMappingURL=main.css.map */
