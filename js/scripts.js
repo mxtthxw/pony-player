@@ -302,14 +302,14 @@ $(document).ready(function(){
 
 	$(".submit").on("click", function(){
 		console.log(juke.songs);
-		var newSong = new Song($(".addartist").val(), $(".addtitle").val(), $(".addyear").val(), $(".addgenre").val(), $(".addlink").val(), $(".addimage").val());
+		var newSong = new Song($(".addartist").val(), $(".addsongtitle").val(), $(".addyear").val(), $(".addgenre").val(), $(".addlink").val(), $(".addimage").val());
 		console.log(juke.songs);
 		// juke.load(newSong);
 		console.log("test");
 		// $(".new-form").reset;
-		$(".addmessage").html($(".addartist").val() + ' - "' + $(".addtitle").val() + '" has been added to Pony Player!');
+		$(".addmessage").html($(".addartist").val() + ' - "' + $(".addsongtitle").val() + '" has been added to Pony Player!');
 		$(".addartist").val("");
-		$(".addtitle").val("");
+		$(".addsongtitle").val("");
 		$(".addyear").val("");
 		$(".addgenre").val("");
 		$(".addlink").val("");
