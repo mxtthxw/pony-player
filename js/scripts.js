@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+// Code for changing pony color scheme -- can probably be simplified/refactored:
+
 	$(".twilight-sparkle").on("click", function(){
 		// $(".headline").css("color", "#653188");
 		$(".t1").css("color", "#653188");
@@ -9,10 +11,12 @@ $(document).ready(function(){
 		$(".t5").css("color", "#653188");
 		$(".t6").css("color", "#653188");
 		$(".pony-buttons").css("color", "#EE4D90");
-		$("body").css("background", "#D0A1E1");
+		$(".body-class").css("background", "#D0A1E1");
 		$(".player").css("border", "10px solid #653188");
 		$(".artist-image").css("border", "5px solid #653188");
 		$(".info").css("color", "#EE4D90");
+		$(".btn-primary").css("background-color", "#653188");
+		$(".btn-primary").css("border-color", "#653188");
 		$("#pony-image").attr("src", "images/twilight_sparkle2.png");
 	})
 
@@ -25,10 +29,12 @@ $(document).ready(function(){
 		$(".t5").css("color", "#F5EFB3");
 		$(".t6").css("color", "#F5EFB3");
 		$(".pony-buttons").css("color", "#EA403F");
-		$("body").css("background", "#F8B968");
+		$(".body-class").css("background", "#F8B968");
 		$(".player").css("border", "10px solid #F5EFB3");
 		$(".artist-image").css("border", "5px solid #F5EFB3");
 		$(".info").css("color", "#EA403F");
+		$(".btn-primary").css("background-color", "#F5EFB3");
+		$(".btn-primary").css("border-color", "#F5EFB3");
 		$("#pony-image").attr("src", "images/applejack1.png");
 	})
 
@@ -41,10 +47,12 @@ $(document).ready(function(){
 		$(".t5").css("color", "#1A96D4");
 		$(".t6").css("color", "#662E8A");
 		$(".pony-buttons").css("color", "#0193CF");
-		$("body").css("background", "#9DD9F8");
+		$(".body-class").css("background", "#9DD9F8");
 		$(".player").css("border", "10px solid #0193CF");
 		$(".artist-image").css("border", "5px solid #0193CF");
 		// $(".info").css("color", "#FFF");
+		$(".btn-primary").css("background-color", "#0193CF");
+		$(".btn-primary").css("border-color", "#0193CF");
 		$("#pony-image").attr("src", "images/rainbow_dash1.png");
 	})
 
@@ -58,10 +66,12 @@ $(document).ready(function(){
 		$(".t6").css("color", "#654F9D");
 		$(".pony-buttons").css("color", "#75D7FD");
 		// $("body").css("background", "#E8EDF0");
-		$("body").css("background", "#FFF");
+		$(".body-class").css("background", "#FFF");
 		$(".player").css("border", "10px solid #654F9D");
 		$(".artist-image").css("border", "5px solid #654F9D");
 		$(".info").css("color", "#75D7FD");
+		$(".btn-primary").css("background-color", "#654F9D");
+		$(".btn-primary").css("border-color", "#654F9D");
 		$("#pony-image").attr("src", "images/rarity1.png");
 	})
 
@@ -74,10 +84,12 @@ $(document).ready(function(){
 		$(".t5").css("color", "#F9BED3");
 		$(".t6").css("color", "#F9BED3");
 		$(".pony-buttons").css("color", "#EC90AE");
-		$("body").css("background", "#FDF2AE");
+		$(".body-class").css("background", "#FDF2AE");
 		$(".player").css("border", "10px solid #F9BED3");
 		$(".artist-image").css("border", "5px solid #F9BED3");
 		$(".info").css("color", "#EC90AE");
+		$(".btn-primary").css("background-color", "#F9BED3");
+		$(".btn-primary").css("border-color", "#F9BED3");
 		$("#pony-image").attr("src", "images/fluttershy1.png");
 	})
 
@@ -90,10 +102,12 @@ $(document).ready(function(){
 		$(".t5").css("color", "#EF519A");
 		$(".t6").css("color", "#EF519A");
 		$(".pony-buttons").css("color", "#C52270");
-		$("body").css("background", "#F7C2DA");
+		$(".body-class").css("background", "#F7C2DA");
 		$(".player").css("border", "10px solid #EF519A");
 		$(".artist-image").css("border", "5px solid #EF519A");
 		$(".info").css("color", "#C52270");
+		$(".btn-primary").css("background-color", "#EF519A");
+		$(".btn-primary").css("border-color", "#EF519A");
 		$("#pony-image").attr("src", "images/pinkie_pie1.png");
 	})
 
@@ -135,17 +149,17 @@ $(document).ready(function(){
 
 	var song08 = new Song("Yumi Zouma", "Keep It Close To Me", "2016", "dream pop", "media/yumi_zouma-keep_it_close_to_me.mp3", "images/yumi_zouma.jpg");
 
-	// var song09 = new Song("Champanes", "Daysaway", "2016", "dream pop", "media/champanes-daysaway.mp3", "images/champanes.jpg");
+	var song09 = new Song("Champanes", "Daysaway", "2016", "dream pop", "media/champanes-daysaway.mp3", "images/champanes.jpg");
 
-	// var song10 = new Song("Maria Usbeck", "Moai Y Yo", "2016", "dream pop", "media/maria_usbeck-moai_y_yo.mp3", "images/maria_usbeck.jpg");
+	var song10 = new Song("Maria Usbeck", "Moai Y Yo", "2016", "dream pop", "media/maria_usbeck-moai_y_yo.mp3", "images/maria_usbeck.jpg");
 
-	// var song11 = new Song("Stefan Weich", "Holy Nights", "2016", "dream pop", "media/stefan_weich-holy_nights.mp3", "images/stefan_weich.jpg");
+	var song11 = new Song("Stefan Weich", "Holy Nights", "2016", "dream pop", "media/stefan_weich-holy_nights.mp3", "images/stefan_weich.jpg");
 
-	// var song12 = new Song("Ela Minus", "Kiddo", "2015", "electro-pop", "media/ela_minus-kiddo.mp3", "images/ela_minus.jpg");
+	var song12 = new Song("Ela Minus", "Kiddo", "2015", "electro-pop", "media/ela_minus-kiddo.mp3", "images/ela_minus.jpg");
 
-	// var song13 = new Song("Programm", "Like The Sun", "2015", "shoegaze", "media/programm-like_the_sun.mp3", "images/programm.jpg");
+	var song13 = new Song("Programm", "Like The Sun", "2015", "shoegaze", "media/programm-like_the_sun.mp3", "images/programm.jpg");
 
-	// var song14 = new Song("Natacha Atlas", "Mon Amie La Rose", "1999", "world beat", "media/natacha_atlas-mon_amie_la_rose.mp3", "images/natacha_atlas.jpg");
+	var song14 = new Song("Natacha Atlas", "Mon Amie La Rose", "1999", "world beat", "media/natacha_atlas-mon_amie_la_rose.mp3", "images/natacha_atlas.jpg");
 
 	// songs array hardcoded with two songs (for testing)
 	// var songs = [{artist:"Chromatics", title:"Cherry", year:"2012", link:"media/chromatics-cherry.mp3", genre:"electro-pop", image:"images/chromatics.jpg"}, {artist:"FEMME", title:"Fever Boy", year:"2014", link:"media/femme-fever_boy.mp3", genre:"pop", image:"images/femme.jpg"}];

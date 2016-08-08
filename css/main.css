@@ -1,3 +1,17 @@
+.btn-primary {
+  border-color: #653188;
+  background-color: #653188; }
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #653188; }
+
+.btn-add-song {
+  box-shadow: 2px 2px 4px #000;
+  margin-top: 100px; }
+
+.btn-add-song:hover {
+  box-shadow: 1px 1px 2px #000; }
+
 .headline {
   font-size: 120px;
   font-family: "Pacifico", cursive;
@@ -6,112 +20,74 @@
   margin-top: 40px;
   margin-bottom: 40px;
   color: #653188;
-  /*color: #F5EFB3;*/
   position: relative;
-  z-index: 10;
-}
+  z-index: 10; }
 
 .pony-buttons {
   font-family: "Quicksand", sans-serif;
   color: #EE4D90;
-  /*color: #EA403F;*/
-}
+  box-shadow: 2px 2px 4px #000; }
 
 .now-playing {
   font-size: 40px;
-  font-family: "Quicksand", sans-serif; 
-}
+  font-family: "Quicksand", sans-serif;
+  text-align: center; }
 
-body {
-  background: #D0A1E1;
-  /*background: #F8B968;*/
-
-}
+.body-class {
+  background: #D0A1E1; }
 
 .artist-image {
-  /*margin-top: 100px;*/
-  /*height: 477px;*/
   width: 170px;
   border: 5px solid #653188;
   border-radius: 100%;
-  margin-top: 140px;
-  margin-left: 40px;
-  /*position: absolute;*/
-}
+  box-shadow: 2px 2px 4px #000;
+  margin-top: 40px;
+  margin-left: 40px; }
 
 #pony-image {
   width: 400px;
-  margin-top: 30px;
-  margin-left: -80px;
   position: absolute;
-  z-index: 5;
-}
+  z-index: 5; }
 
 .player {
   border: 10px solid #653188;
-  /*border: 10px solid #F5EFB3;*/
   border-radius: 20px;
-  padding-bottom: 20px; 
-}
-
-#artist, #title, #year, #genre, #track-length, #play-count {
-  font-size: 30px;
-  font-family: "Quicksand", sans-serif; 
-}
+  box-shadow: 2px 2px 4px #000;
+  padding-bottom: 20px; }
 
 .addsong {
   font-family: "Quicksand", sans-serif;
   color: #000;
   float: right;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 .info {
   color: #EE4D90;
-  /*color: #EA403F;*/
   font-family: "Pacifico", cursive;
-  /*margin-top: -5px; */
-}
+  text-align: right; }
+
+.info2 {
+  font-family: "Pacifico", cursive;
+  text-align: left; }
 
 .new-form {
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
-.t1 {
-  
-}
-
-.t2 {
-  
-}
-
-.t3 {
-  
-}
-
-.t4 {
-  
-}
-
-.t5 {
-  
-}
-
-.t6 {
-  
-}
+input {
+  margin-left: 20px; }
 
 .addmessage {
   font-family: "Quicksand", sans-serif;
   color: #000;
   padding-left: 10px;
   /*margin-top: 20px;*/
-  display: inline;
-}
+  display: inline; }
 
 .buttons {
   margin-top: 30px;
-  font-family: "Quicksand", sans-serif;
-}
+  font-family: "Quicksand", sans-serif; }
+
+.buttons-container > button {
+  box-shadow: 2px 2px 4px #000; }
 
 /*# sourceMappingURL=main.css.map */

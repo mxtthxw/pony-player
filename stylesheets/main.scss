@@ -9,6 +9,27 @@ $color2: #653188;
 $color3: #EE4D90;
 // french rose (bright pink)
 $color4: #ffffff;
+// white
+$color5: #243B72;
+// astronaut (deep blue)
+
+.btn-primary {
+	border-color: $color2;
+	background-color: $color2;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, {
+	background-color: $color2;
+}
+
+.btn-add-song {
+	box-shadow: 2px 2px 4px #000;
+	margin-top: 5 * $unit;
+}
+
+.btn-add-song:hover {
+	box-shadow: 1px 1px 2px #000;;
+}
 
 .headline {
 	font-size: 3 * $fontsize;
@@ -18,45 +39,119 @@ $color4: #ffffff;
 	margin-top: $unit * 2;
 	margin-bottom: $unit * 2;
 	color: $color2;
+	position: relative;
+	z-index: 10;
+}
+
+.pony-buttons {
+	font-family: $font2;
+	color: $color3;
+	box-shadow: 2px 2px 4px #000;
 }
 
 .now-playing {
 	font-size: $fontsize;
 	font-family: $font2;
+	text-align: center;
 }
 
-body {
+.body-class {
 	background: $color1;
 }
 
 .artist-image {
-	margin-top: 100px;
+	// margin-top: 100px;
+	// height: 477px;
+	width: 170px;
+	border: 5px solid $color2;
+	border-radius: 100%;
+	box-shadow: 2px 2px 4px #000;
+	margin-top: 40px;
+	margin-left: 40px;
+	// position: absolute;
 }
 
-#twilight {
-	width: 350px;
-	margin-top: 30px;
-	margin-left: -80px;
+#pony-image {
+	width: 400px;
+	// margin-top: $unit * 1.5;
+	// margin-left: -80px;
+	position: absolute;
+	z-index: 5;
 }
 
 .player {
 	border: $unit * 0.5 solid $color2;
 	border-radius: $unit;
+	box-shadow: 2px 2px 4px #000;
 	// padding-top: $unit;
 	padding-bottom: $unit;
+	// height: 900px;
 }
 
-#artist, #title, #year, #genre, #track-length, #play-count {
-	font-size: 0.75 * $fontsize;
+.addsong {
 	font-family: $font2;
+	color: #000;
+	float: right;
+	margin-bottom: 10px;
 }
 
 .info {
 	color: $color3;
 	font-family: $font1;
-	margin-top: -5px;
+	text-align: right;
+	// margin-top: -5px;
+}
+
+.info2 {
+	font-family: $font1;
+	text-align: left;
+}
+
+.new-form {
+  margin-bottom: 20px;
+}
+
+input {
+	margin-left: 20px;
+}
+
+.t1 {
+  
+}
+
+.t2 {
+  
+}
+
+.t3 {
+  
+}
+
+.t4 {
+  
+}
+
+.t5 {
+  
+}
+
+.t6 {
+  
+}
+
+.addmessage {
+  font-family: $font2;
+  color: #000;
+  padding-left: 10px;
+  /*margin-top: 20px;*/
+  display: inline;
 }
 
 .buttons {
 	margin-top: 30px;
+	font-family: $font2;
+}
+
+.buttons-container > button {
+	box-shadow: 2px 2px 4px #000;
 }

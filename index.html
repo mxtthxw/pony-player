@@ -3,36 +3,44 @@
 1. fix pony buttons so twilight is highlighted on page load, but un-highlights when another pony is clicked.  adding class "active" doesn't quite do the trick.
 2. fix responsiveness
 3. add progress bar and/or time counter?
-4. add playlist of all tracks? 
+4. add playlist of all tracks?
 -->
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Pony Player</title>
 	<link href='https://fonts.googleapis.com/css?family=Pacifico|Quicksand' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"></link>
+	<!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"></link> -->
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"></link>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css.map"></link>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css.map"></link>
-  <script src="bootstrap/js/bootstrap.js"></script>
+  <!-- <script src="bootstrap/js/bootstrap.js"></script> -->
   <script src="bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="js/scripts.js"></script>
 </head>
-<body>
 
+<body class="body-class">
+
+<!-- TITLE -->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<h1 class="headline"><span class="t1">P</span><span class="t2">o</span><span class="t3">n</span><span class="t4">y</span><span class="t5"> P</span><span class="t6">l</span><span class="t1">a</span><span class="t2">y</span><span class="t3">e</span><span class="t4">r</span></h1>
 			</div>
-			<div class="col-md-2"></div>
+			<div class="col-md-2">
+				<button type="button" class="btn btn-primary btn-lg btn-add-song" data-toggle="modal" data-target="#myModal">
+  				+ Add Song
+				</button>
+			</div>
 		</div>
 	</div>
 
+<!-- PONY BUTTONS -->
 	<div class="pony-picker row">
 		<div class="col-md-2">
 		</div>
@@ -63,61 +71,94 @@
 	</div>
 
 	<div class="container player">
-		<div class="col-md-3">
-			<span id="image"><img class="artist-image" src="images/chromatics.jpg"></span>
-		</div>
-		<div class="col-md-6">
-			<h2 class="now-playing">Now Playing</h2>
-			<h3 class="info t1">Artist: <span id="artist">Chromatics</span></h3>
-			<h3 class="info t2">Title: <span id="title">Cherry</span></h3>
-			<h3 class="info t3">Year: <span id="year">2012</span></h3>
-			<h3 class="info t4">Genre: <span id="genre">electro-pop</span></h3>
-			<h3 class="info t5">Duration: <span id="track-length"></span></h3>
-			<h3 class="info t6">Play Count: <span id="play-count">0</span></h3>
 
-			<audio id="audio-source">
-			  <source type="audio/mpeg">
-				Your browser does not support the audio element.
-			</audio>
-
-<!-- temporary audio with controls to test duration property -->
-<!-- 			<audio id="audio-source2" controls>
-			  <source type="audio/mpeg" src="media/champanes-daysaway.mp3">
-				Your browser does not support the audio element.
-			</audio> -->
-
-			<div class="buttons">
-				<button type="button" name="play" class="btn btn-default play">Play</button>
-				<button type="button" name="pause" class="btn btn-default pause" id="pause">Pause</button>
-				<button type="button" name="stop" class="btn btn-default stop">Stop</button>
-				<button type="button" name="previous" class="btn btn-default previous">Previous</button>
-				<button type="button" name="next" class="btn btn-default next">Next</button>
-				<button type="button" name="random" class="btn btn-default random">Random</button>
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="now-playing">Now Playing</h2>
 			</div>
 		</div>
-		<div class="col-md-3">
-			<img src="images/twilight_sparkle2.png" id="pony-image">
-			<!-- <img src="images/applejack2.png" id="pony-image"> -->
+
+		<div class="row">
+			<div class="col-md-2">
+				<span id="image"><img class="artist-image" src="images/chromatics.jpg"></span>
+			</div>
+			<div class="col-md-3">
+				<h3 class="info t1">Artist:</h3>
+				<h3 class="info t2">Title:</h3>
+				<h3 class="info t3">Year:</h3>
+				<h3 class="info t4">Genre:</h3>
+				<h3 class="info t5">Duration:</h3>
+				<h3 class="info t6">Play Count:</h3>
+			</div>
+			<div class="col-md-3">
+				<h3 class="info2"><span id="artist">Chromatics</span></h3>
+				<h3 class="info2"><span id="title">Cherry</span></h3>
+				<h3 class="info2"><span id="year">2012</span></h3>
+				<h3 class="info2"><span id="genre">electro-pop</span></h3>
+				<h3 class="info2"><span id="track-length">4:32</span></h3>
+				<h3 class="info2"><span id="play-count">0</span></h3>
+			</div>
+			<div class="col-md-4">
+				<img src="images/twilight_sparkle2.png" id="pony-image">
+			</div>
 		</div>
 
+		<div class="buttons row">
+			<div class="col-md-3">
+				<audio id="audio-source">
+			  	<source type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+			<div class="col-md-6">
+				<div class="buttons-container">
+					<button type="button" name="play" class="btn btn-default play">Play</button>
+					<button type="button" name="pause" class="btn btn-default pause" id="pause">Pause</button>
+					<button type="button" name="stop" class="btn btn-default stop">Stop</button>
+					<button type="button" name="previous" class="btn btn-default previous">Previous</button>
+					<button type="button" name="next" class="btn btn-default next">Next</button>
+					<button type="button" name="random" class="btn btn-default random">Random</button>
+				</div>
+			</div>
+			<div class="col-md-3">
+			</div>
+		</div>
+		
 	</div>
 
-	<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<h2 class="now-playing">Add A Song:</h2>
-				<form class="new-form">
-					<h3 class="info t1">Artist: <input type="text" name="addartist" class="addsong addartist"></h3>
-					<h3 class="info t2">Title: <input type="text" name="addtitle" class="addsong addtitle"></h3>
-					<h3 class="info t3">Year: <input type="text" name="addyear" class="addsong addyear"></h3>
-					<h3 class="info t4">Genre: <input type="text" name="addgenre" class="addsong addgenre"></h3>
-					<h3 class="info t5">MP3 URL: <input type="text" name="addlink" class="addsong addlink"></h3>
-					<h3 class="info t6">Image URL: <input type="text" name="addimage" class="addsong addimage"></h3>
-					<input type="submit" class="submit" action="submit"><h3 class="info addmessage"></h3>
-				</form>
-			</div>
-			<div class="col-md-4"></div>
-		</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="body-class modal-content player">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <!-- <h4 class="modal-title">Add A Song</h4> -->
+	      </div>
+	      <div class="modal-body">
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<h2 class="now-playing">Add A Song:</h2>
+							<form class="new-form">
+								<h3 class="info t1">Artist: <input type="text" name="addartist" class="addsong addartist"></h3>
+								<h3 class="info t2">Title: <input type="text" name="addtitle" class="addsong addtitle"></h3>
+								<h3 class="info t3">Year: <input type="text" name="addyear" class="addsong addyear"></h3>
+								<h3 class="info t4">Genre: <input type="text" name="addgenre" class="addsong addgenre"></h3>
+								<h3 class="info t5">MP3 URL: <input type="text" name="addlink" class="addsong addlink"></h3>
+								<h3 class="info t6">Image URL: <input type="text" name="addimage" class="addsong addimage"></h3>
+								<!-- <input type="submit" class="submit" action="submit"> -->
+								<h3 class="info addmessage"></h3>
+							</form>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+	      </div>
+	      <div class="modal-footer">
+	        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+	        <button type="button" class="btn btn-primary submit">Add To Pony Player</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 </body>
 </html>
